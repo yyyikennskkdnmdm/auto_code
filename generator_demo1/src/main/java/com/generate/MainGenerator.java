@@ -18,13 +18,20 @@ public class MainGenerator {
 
     public static void doGenerate(Object model) throws TemplateException, IOException {
         String projectPath = System.getProperty("user.dir");
-        String inputPath = new File(projectPath, "acm-template").getAbsolutePath();
-        String outputPath = projectPath;
+        File parentFile = new File(projectPath).getParentFile();
+        // 如果在auto_code中执行需要将inputPath交换
+//        String inputPath = new File(parentFile, "acm-template").getAbsolutePath();
+        String inputPath = parentFile.getPath();
+        String outputPath = parentFile.getPath();
         //生成静态文件
 //        StaticGenerator.copyFilesByRecursive(inputPath, outputPath);
 
         // 生成动态文件
-        String inputDynamicFilePath = projectPath + File.separator + "generator_demo1" + File.separator + "src"
+        // 如果在auto_code中执行需要将inputDynamicFilePath交换
+//        String inputDynamicFilePath = projectPath + File.separator + "generator_demo1" + File.separator + "src"
+//                + File.separator + "main" + File.separator + "resources" + File.separator + "templates"
+//                + File.separator + "MainTemplate.java.ftl";
+        String inputDynamicFilePath = inputPath + File.separator + "generator_demo1" + File.separator + "src"
                 + File.separator + "main" + File.separator + "resources" + File.separator + "templates"
                 + File.separator + "MainTemplate.java.ftl";
         String outputDynamicFilePath = outputPath + File.separator + "acm-template2" + File.separator +
