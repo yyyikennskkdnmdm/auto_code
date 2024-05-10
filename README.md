@@ -1,2 +1,5 @@
-# 第一阶段目标
-可以生成，并改造acm-template项目
+# 第一阶段目标 generator_demo1/generate/MainGenerator
+通过main可以静态和动态复制acm-template
+
+# 第二阶段目标 
+通过命令行复制acm-template

@@ -7,6 +7,6 @@ import lombok.Data;
 public class MainTemplateConfig {
 
     private boolean loop;
-    private String author = "yupi";
+    private String author = "jianghao";
     private String outputText = "sum = ";
 }
